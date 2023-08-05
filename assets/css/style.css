@@ -1,0 +1,142 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  background-color: #067ca0;
+  width: 100vw;
+  height: 100vh;
+}
+
+.container {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.product-card {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+  text-align: center;
+  background-color: rgb(0, 0, 0);
+  color: white;
+  border: 1px solid #f3f0ec;
+  border-radius: 3%;
+  overflow: hidden;
+}
+
+.product-card img {
+  width: 100%;
+}
+
+.input-container {
+  width: 200px;
+  margin: 0.5rem;
+  position: relative;
+}
+
+.label {
+  position: absolute;
+  left: 10px;
+  top: 8px;
+  transition: all 0.2s;
+  padding: 0 2px;
+  z-index: 1;
+  color: #13afaf;
+}
+
+.text-input {
+  padding: 0.3rem;
+  width: 100%;
+  border: 2px solid #378474;
+  background-color: transparent;
+  border-radius: 5px;
+  font-size: 16px;
+  outline: none;
+  transition: all 0.3s;
+  color: #378474;
+}
+
+.label::before {
+  content: "";
+  height: 3px;
+  background-color: #000;
+  position: absolute;
+  left: 0;
+  top: 10px;
+  width: 100%;
+  z-index: -1;
+}
+
+.text-input:focus {
+  border: 2px solid #378474;
+}
+
+.text-input:focus + .label,
+.text-input:valid + .label {
+  top: -10px;
+  color: #378474;
+  font-size: 14px;
+}
+
+.text-input::placeholder {
+  font-size: 16px;
+  opacity: 0;
+  transition: all 0.3s;
+}
+
+.text-input:focus::placeholder {
+  opacity: 1;
+  animation-delay: 0.2s;
+}
+
+button {
+  padding: 0.4rem;
+  width: 50%;
+  border: 2px solid #382f26;
+  background-color: transparent;
+  border-radius: 5px;
+  font-size: 16px;
+  color: #b3b3b3;
+  margin-bottom: 1rem;
+}
+
+button:hover,
+button:focus {
+  border: 2px solid #378474;
+  color: #378474;
+}
+
+.total-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 200px;
+  background-color: #000;
+  color: #f5f6f6;
+  padding: 1rem;
+  border: 1px solid #42045b;
+  border-radius: 5%;
+}
+
+.color-box {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.color-circle {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1px solid #378474;
+  background-color: #378474;
+}
